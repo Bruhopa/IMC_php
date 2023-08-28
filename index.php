@@ -67,12 +67,16 @@
 
         if ($imc < 18.5) {
         $status = "Abaixo do peso";
-        } else if ($imc < 25) {
+        } else if ($imc>= 18.5 & $imc<= 24.9){
         $status = "Peso normal";
-        } else if ($imc < 30) {
-        $status = "Acima do peso";
+        } else if ($imc>= 25 & $imc<= 29.9) {
+        $status = "Pré Obesidade";
+        } else if ($imc>= 30 & $imc<= 34.9) {
+        $status = "Obesidade Grau 1";
+        } else if ($imc>= 35 & $imc<= 39.9) {
+        $status = "Obesidade Grau 2";
         } else {
-        $status = "Obeso";
+        $status = "Obesidade Grau 3";
         }
 
         echo "<p>".$nome.", idade " .$idade." tem o IMC de: ".$imc.", isso é considerado ".$status."</p>";
